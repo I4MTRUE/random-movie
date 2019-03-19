@@ -5,3 +5,4 @@ Genre j'ai deja un code permettant de sortir un JSON d'un api de omDb ce qui est
 Apres va falloir que je modifie le truc pour pouvoir utiliser le JSON (oui je galere en js j'ai jamais fait 
 ok :'( )
 et doooonc ca avance !
+jour 2 : ca avance tojours ...
