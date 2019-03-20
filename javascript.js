@@ -1,11 +1,11 @@
 // code obligatoire qui introduit la fonction pad, doit repzrer avznt la deuxième pzrtie
-//function pad(number, length) {
-//  var str = '' + number;
-//  while(str.length < length) {
-//    str = '0' + str;
-//  }
-// return str;
-//}
+function pad(number, length) {
+  var str = '' + number;
+  while(str.length < length) {
+    str = '0' + str;
+  }
+ return str;
+}
 
 // Random Movie
 $("#random").click(function() {
