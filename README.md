@@ -7,4 +7,4 @@ Apres va falloir que je modifie le truc pour pouvoir utiliser le JSON (oui je ga
 ok :'( )
 et doooonc ca avance !
 jour 2 : ca avance tojours ...
-Je veux tester ca !
+EDIT : Jour 2 : Atom c'est grave bien... auto upload sur github :ok_hand:
