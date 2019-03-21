@@ -1,4 +1,4 @@
-// code obligatoire qui introduit la fonction pad, doit repzrer avznt la deuxième pzrtie
+// code obligatoire qui introduit la fonction pad, doit reparer avznt la deuxième partie
 function pad(number, length) {
   var str = '' + number;
   while(str.length < length) {
