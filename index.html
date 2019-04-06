@@ -2,27 +2,46 @@
     <head>
       <link rel="stylesheet" type="text/css" href="theme.css">
       <link href="https://fonts.googleapis.com/css?family=Heebo:900" rel="stylesheet">
-        <script src="index.pack.js"></script>
-        <script type="text/javascript" src="jquery-1.7.2.js"></script>
+        <script type="text/javascript" src="jquery.js"></script>
     </head>
     <body>
     <h1>
       Random Movie !!!
       <p/>
       <script type="text/javascript">
-function pad(number, length) {
-var str = '' + number;
-while(str.length < length) {
-str = '0' + str;}
-return str;}
-var movie = pad(Math.floor((Math.random() * 2155529) + 1), 7);
-let a = "https://www.imdb.com/title/tt"+movie
-document.write(a.link(a));
-
+      function pad(number, length) {
+        var str = '' + number;
+        while(str.length < length) {
+          str = '0' + str;
+        }
+       return str;
+      }
+        var movie = pad(Math.floor((Math.random() * 2155529) + 1), 7);
+        $.getJSON("http://www.omdbapi.com/?i=tt"+movie+"&apikey=525ac35b", function(data) {
+          var title = data.Title;
+          var year = data.Year;
+          var rating = data.imdbRating;
+          var actors = data.Actors;
+          var plot = data.Plot;
+          var link = 'http://www.imdb.com/title/tt'+movie+'/';
+          $("#title").text(title);
+          $("#year").text(year);
+          $("#rating").text(rating);
+          $("#actors").text(actors);
+          $("#plot").text(plot);
+          $("#link").attr("href", link);
+        })
       </script>
-    </h1>
-    <h0> NOW WITH LINKS !!! WOOOOOOAH</h0>
-    <h6> je suis tellement un thug je mets ma signature EMERIC BAHA </h6>
-    <h7> v 0.2 </h7>
+      <p> Title : </p>
+      <p id=title> </p>
+      <p> Year : </p>
+      <p id=year> </p>
+      <p> Rating : </p>
+      <p id=rating> </p>
+      <p> Actors : </p>
+      <p id =actors> </p>
+      <p> Plot : </p>
+      <p id=plot> </p>
+      <h7> v.03 </h7>
     </body>
 </html>
