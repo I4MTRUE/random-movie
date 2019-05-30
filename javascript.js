@@ -12,11 +12,23 @@ function pad(number, length) {
     var rating = data.imdbRating;
     var actors = data.Actors;
     var plot = data.Plot;
+    var season = data.Season;
+    var imdbVotes = data.imdbVotes ;
+    var votes = parseInt(imdbVotes,10)
     var link = 'http://www.imdb.com/title/tt'+movie+'/';
+    var debug = 'http://www.omdbapi.com/?i=tt'+movie+'&apikey=525ac35b'
     $("#title").text(title);
     $("#year").text(year);
     $("#rating").text(rating);
     $("#actors").text(actors);
     $("#plot").text(plot);
-    $("#link a").attr("href", link);
+    $("#season").text(season);
+    $("#debug").text(debug);
+    $("#link").attr("href", link);
+    if (votes > 100) {
+    console.log(votes);
+                        }
+    else {
+    document.location.reload(true);
+    }
   })
