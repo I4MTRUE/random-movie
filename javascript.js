@@ -25,7 +25,7 @@ function pad(number, length) {
     $("#season").text(season);
     $("#debug").text(debug);
     $("#link").attr("href", link);
-    if (votes > 100) {
+    if (votes > 500) {
     console.log(votes);
                         }
     else {
