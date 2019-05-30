@@ -22,9 +22,11 @@ function pad(number, length) {
     $("#rating").text(rating);
     $("#actors").text(actors);
     $("#plot").text(plot);
+    $("#movie").text(movie);
     $("#season").text(season);
     $("#debug").text(debug);
     $("#link").attr("href", link);
+
     if (votes > 500) {
     console.log(votes);
                         }
