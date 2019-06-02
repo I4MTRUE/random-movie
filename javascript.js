@@ -14,10 +14,12 @@ function pad(number, length) {
     var plot = data.Plot;
     var season = data.Season;
     var imdbVotes = data.imdbVotes ;
-    var votes = parseInt(imdbVotes,10)
+    var votes = parseInt(imdbVotes,10);
+    var type = data.Type;
     var link = 'http://www.imdb.com/title/tt'+movie+'/';
     var debug = 'http://www.omdbapi.com/?i=tt'+movie+'&apikey=525ac35b'
     $("#title").text(title);
+    $("#type").text(type);
     $("#year").text(year);
     $("#rating").text(rating);
     $("#actors").text(actors);
