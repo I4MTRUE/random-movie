@@ -6,9 +6,10 @@ function pad(number, length) {
  return str;
 }
 var i = 0
-
+var votes = 0
+var a = 0
+votes < 10
 function yeet(movie,callback){
-while(i<5){
 $.getJSON("http://www.omdbapi.com/?i=tt"+movie+"&apikey=bf57cc7e", function(data){
   var title = data.Title;
   var year = data.Year;
@@ -31,13 +32,28 @@ $.getJSON("http://www.omdbapi.com/?i=tt"+movie+"&apikey=bf57cc7e", function(data
   $("#season").text(season);
   $("#debug").text(debug);
   $("#link").attr("href", link);
-  callback(data.Title)
-}, i = i + 1)}}
+  callback(data.imdbVotes)
+}, i = i + 1)}
 
 function handleName(Title) {
-    console.log(Title);
-    return Title;
+    votes = Title;
+    votes = votes || 0;
+          if (votes == "N/A") {votes = 0;}
+          else {votes = votes;};
+    votes = parseInt(votes);
 }
+function votes(){
+  console.log(votes);
+}
+
+votes(votes);
+
+
+
 var movie = pad(Math.floor((Math.random() * 2155529) + 1), 7);
 yeet(movie, handleName);
+
 console.log(i);
+if(votes==0){
+  console.log("nooooo")
+}
