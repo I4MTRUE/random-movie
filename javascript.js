@@ -9,6 +9,11 @@ var i = 0
 var votes = 0
 var a = 0
 votes < 10
+var c = 10
+c = parseInt(c)
+daloop:while(i<15){
+var movie = pad(Math.floor((Math.random() * 2155529) + 1), 7);
+yeet(movie, handleName);
 function yeet(movie,callback){
 $.getJSON("http://www.omdbapi.com/?i=tt"+movie+"&apikey=bf57cc7e", function(data){
   var title = data.Title;
@@ -34,26 +39,20 @@ $.getJSON("http://www.omdbapi.com/?i=tt"+movie+"&apikey=bf57cc7e", function(data
   $("#link").attr("href", link);
   callback(data.imdbVotes)
 }, i = i + 1)}
-
 function handleName(Title) {
     votes = Title;
     votes = votes || 0;
           if (votes == "N/A") {votes = 0;}
           else {votes = votes;};
     votes = parseInt(votes);
+    voting();
+    if (votes > 10){console.log(nice);};
 }
-function votes(){
+function voting(){
   console.log(votes);
 }
+if(votes!=0){console.log("ici")}
 
-votes(votes);
-
-
-
-var movie = pad(Math.floor((Math.random() * 2155529) + 1), 7);
-yeet(movie, handleName);
-
-console.log(i);
 if(votes==0){
   console.log("nooooo")
-}
+}}
