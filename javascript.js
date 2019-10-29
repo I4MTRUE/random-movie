@@ -25,21 +25,12 @@ $.getJSON("http://www.omdbapi.com/?i=tt"+movie+"&apikey=bf57cc7e", function(data
   var type = data.Type;
   var link = 'http://www.imdb.com/title/tt'+movie+'/';
   var debug = 'http://www.omdbapi.com/?i=tt'+movie+'&apikey=bf57cc7e'
-  $("#title").text(title);
-  $("#type").text(type);
-  $("#year").text(year);
-  $("#rating").text(rating);
-  $("#actors").text(actors);
-  $("#plot").text(plot);
-  $("#movie").text(movie);
-  $("#season").text(season);
-  $("#debug").text(debug);
-  $("#link").attr("href", link);
+
   votes = votes || 0;
         if (votes == "N/A") {votes = 0;}
         else {votes = votes;};
   votes = parseInt(votes);
-  if (votes > 5){fuk = 1
+  if (votes > 50){fuk = 1
   console.log(fuk);
   fuk = parseInt(fuk);};
   i = i + 1
@@ -47,4 +38,15 @@ if(fuk == 0){
 console.log("here we go again")
 var movie = pad(Math.floor((Math.random() * 2155529) + 1), 7);
 yeet(movie);
-}})}
+}
+else{
+$("#title").text(title);
+$("#type").text(type);
+$("#year").text(year);
+$("#rating").text(rating);
+$("#actors").text(actors);
+$("#plot").text(plot);
+$("#movie").text(movie);
+$("#season").text(season);
+$("#debug").text(debug);
+$("#link").attr("href", link);}})}
