@@ -8,12 +8,10 @@ function pad(number, length) {
 var i = 0
 var votes = 0
 var a = 0
+var fuk = 0
 votes < 10
-var c = 10
-c = parseInt(c)
-daloop:while(i<15){
 var movie = pad(Math.floor((Math.random() * 2155529) + 1), 7);
-yeet(movie, handleName);
+yeet(movie);
 function yeet(movie,callback){
 $.getJSON("http://www.omdbapi.com/?i=tt"+movie+"&apikey=bf57cc7e", function(data){
   var title = data.Title;
@@ -37,22 +35,16 @@ $.getJSON("http://www.omdbapi.com/?i=tt"+movie+"&apikey=bf57cc7e", function(data
   $("#season").text(season);
   $("#debug").text(debug);
   $("#link").attr("href", link);
-  callback(data.imdbVotes)
-}, i = i + 1)}
-function handleName(Title) {
-    votes = Title;
-    votes = votes || 0;
-          if (votes == "N/A") {votes = 0;}
-          else {votes = votes;};
-    votes = parseInt(votes);
-    voting();
-    if (votes > 10){console.log(nice);};
-}
-function voting(){
-  console.log(votes);
-}
-if(votes!=0){console.log("ici")}
-
-if(votes==0){
-  console.log("nooooo")
-}}
+  votes = votes || 0;
+        if (votes == "N/A") {votes = 0;}
+        else {votes = votes;};
+  votes = parseInt(votes);
+  if (votes > 5){fuk = 1
+  console.log(fuk);
+  fuk = parseInt(fuk);};
+  i = i + 1
+if(fuk == 0){
+console.log("here we go again")
+var movie = pad(Math.floor((Math.random() * 2155529) + 1), 7);
+yeet(movie);
+}})}
