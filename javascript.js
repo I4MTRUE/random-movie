@@ -19,7 +19,7 @@ function yeet(movie){
     var votes = parseInt(imdbVotes,10);
     var type = data.Type;
     var link = 'http://www.imdb.com/title/tt'+movie+'/';
-    var debug = 'http://www.omdbapi.com/?i=tt'+movie+'&apikey=bf57cc7e'
+    var debug = 'http://www.omdbapi.com/?i=tt'+movie+'&apikey=525ac35b'
 
     if (votes > 500) {
     console.log(votes);
