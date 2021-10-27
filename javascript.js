@@ -8,7 +8,7 @@ function pad(number, length) {
   var movie = pad(Math.floor((Math.random() * 2155529) + 1), 7);
   yeet(movie);
 function yeet(movie){
-  $.getJSON("http://www.omdbapi.com/?i=tt"+movie+"&apikey=bf57cc7e", function(data) {
+  $.getJSON("http://www.omdbapi.com/?i=tt"+movie+"&apikey=525ac35b", function(data) {
     var title = data.Title;
     var year = data.Year;
     var rating = data.imdbRating;
