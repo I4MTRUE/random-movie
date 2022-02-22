@@ -1,6 +1,6 @@
 # Random-Movie
 
-UPDATE : J'ai desactivé le site pour des raisons de budget d'api donc bah aurevoir :(
+UPDATE : J'ai desactivé le site a cause du prix de l'api donc bah aurevoir :(
 
 ########
 
